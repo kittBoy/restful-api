@@ -266,11 +266,11 @@ var CryptoRSA = apicrypto.CryptoRSA,
 
 方式二
 
-const {CryptoRSA, CryptoAES, signature} = require('@xyz/apicrypto');
+const {CryptoRSA, CryptoAES, signature} = require('apicrypto');
 
 //or
 
-import {CryptoRSA, CryptoAES, signature} from '@xyz/apicrypto'
+import {CryptoRSA, CryptoAES, signature} from 'apicrypto'
 
 //支持typescript
 ```
@@ -298,7 +298,7 @@ export default interface ICryptoRSA {
 
 
 ```
-import {CryptoRSA} from '@xyz/apicrypto'
+import {CryptoRSA} from 'apicrypto'
 
 //首先创建对象
 
@@ -328,7 +328,7 @@ export default interface   IEncryptAES {
 
 
 ```
-import {CryptoAES} from '@xyz/apicrypto'
+import {CryptoAES} from 'apicrypto'
 
 //首先创建对象
 
@@ -351,7 +351,7 @@ public signature(key: string, head = {}, data = {}):string
 ```
 
 ```
-import {signature} from '@xyz/apicrypto'
+import {signature} from 'apicrypto'
 
 signature(key, head, data)
 ```
@@ -369,7 +369,7 @@ signature(key, head, data)
 <![endif]-->
 <script src="lib/apicrypto.js"></script>
 
-var AES_KEY = "hello xyz";//生成环境key应随机生成。
+var AES_KEY = "hello key";//生成环境key应随机生成。
 var header = {
     time: Date.now(),
     tt: 'any'
@@ -497,7 +497,7 @@ const path = require('path');
 const static = require('koa-static');
 const bodyParser = require('koa-bodyparser')
 const router = require('koa-router')()
-const {CryptoRSA, CryptoAES, signature} = require('@xyz/apicrypto');
+const {CryptoRSA, CryptoAES, signature} = require('apicrypto');
 
 const cryptoRSA = new CryptoRSA();
 const cryptoAES = new CryptoAES();
